@@ -10,32 +10,42 @@ const alive = async (m, Matrix) => {
   
   const prefix = /^[\\/!#.]/gi.test(m.body) ? m.body.match(/^[\\/!#.]/gi)[0] : '/';
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).toLowerCase() : '';
-    if (['alive', 'uptime', 'runtime'].includes(cmd)) {
+    if (['repo', 'sc'].includes(cmd)) {
 
-  const uptimeMessage = `*👨‍💻TOpBOY ＩＳ ＡＬＩＶＥ👨‍💻*
+  const uptimeMessage = `
 _________________________________________
-
-*📆 Day: ${days} Day*
-*🕰️Hour: ${hours} Hour*
-*⏳ Minute: ${minutes} Minute*
-*⏲️ Second: ${seconds} Second*
-*👨‍💻Developer: TOpBOY*
+*🔰GitHub Profile - @Hubdarkweb*
+*🔰Name:  𝐂yberpunk🌊🥷🗽🐼👨‍💻*
+*🔰Username:* @TOpPLUG
+*🔰Bio: Zooties☣️🪲🐼🗽🥷🌊🪰🏴‍☠️📱🪬🕷️🪳*
+*𝐌𝐚𝐬𝐭𝐞𝐫_of_𝐋𝐢𝐟𝐞*
+*@𝐂yberpunk🌊🥷🗽🐼*
+*🔰IDID:* Hubdarkweb 
+*🔰Node IDD:* U_kgDOB4KZjw
+*🔰Profile URL:* https://avatars.githubusercontent.com/u/Hubdarkweb?v=4
+*🔰GitHub URL:* https://github.com/Hubdarkweb
+*🔰Adminin:* No
+*🔰Companyy:* TOpPLUG GEEKS 🪬🥷🗽🐼🪲☣️🏴‍☠️
+*🔰Blogg:* https://cyberpunk.vercel.app/index.html
+*🔰Locationon:* Africa/Kenya 
+*🔰Emailil:* N/A
+*🔰Public Repositorieses:* 110
 _________________________________________
 `;
 
   const buttons = [
         {
-          "name": "quick_reply",
+          "name": "cta_url",
           "buttonParamsJson": JSON.stringify({
-            display_text: "MENU",
-            id: `.menu`
+            display_text: "GITHUB",
+            url: `https://github.com/Hubdarkweb/TOpBOY/fork`
           })
         },
         {
           "name": "quick_reply",
           "buttonParamsJson": JSON.stringify({
-            display_text: "PING",
-            id: `.ping`
+            display_text: "MENU",
+            id: `.menu`
           })
         }
         ];
@@ -52,7 +62,7 @@ _________________________________________
             text: uptimeMessage
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
-            text: "© 𝐂ʀᴇᴀᴛᴇᴅ 𝐁ʏ🐼🥷🗽 TOpPLUG 🏴‍☠️ Cyberpunk 🐼🥷🗽"
+            text: "© 𝐂ʀᴇᴀᴛᴇᴅ 𝐁ʏ  𝐂yberpunk🌊🥷🗽🐼"
           }),
           header: proto.Message.InteractiveMessage.Header.create({
             title: "",
@@ -69,7 +79,7 @@ _________________________________________
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "TOpBOY",
+                  newsletterName: "TOpBOY GITHUB",
                   serverMessageId: 143
                 }
               }
