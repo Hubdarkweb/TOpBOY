@@ -10,7 +10,7 @@
       "SESSION_ID": {
       "description": "your session id",
       "required": true,
-      "value": ""
+      "value": "levanter_726d05be755644bd288ca3f4587f19c72"
     },
     "MODE": {
       "description": "mode public or self",
